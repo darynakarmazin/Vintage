@@ -1,33 +1,33 @@
-@import url('reset.css');
+@import url("reset.css");
 
-@import url('widgets.css');
+@import url("widgets.css");
 
-@import url('elements.css');
+@import url("elements.css");
 
-@import url('comments.css');
+@import url("comments.css");
 
-@import url('../js/poshytip-1.1/src/tip-yellow/tip-yellow.css');
+@import url("../js/poshytip-1.1/src/tip-yellow/tip-yellow.css");
 
-@import url('isotope.css');
+@import url("isotope.css");
 /*
 * Folder v1.0
 *
 */
-/* Vars ----------------------------------------------------*//* Mixins ----------------------------------------------------*//* IMPORT ------------------------------------------------------------*/
+/* Vars ----------------------------------------------------*/ /* Mixins ----------------------------------------------------*/ /* IMPORT ------------------------------------------------------------*/
 /* aditional */
-/* Fonts ----------------------------------------------------*//* Here you go ie */
+/* Fonts ----------------------------------------------------*/ /* Here you go ie */
 @font-face {
-  font-family: 'mensch';
+  font-family: "mensch";
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/mensch-webfont.eot');
+  src: url("../fonts/mensch-webfont.eot");
 }
 /* For real web browsers */
 @font-face {
-  font-family: 'mensch';
+  font-family: "mensch";
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/mensch-webfont.ttf');
+  src: url("../fonts/mensch-webfont.ttf");
 }
 /* GENERAL ------------------------------------------------------------*/
 .cf:after,
@@ -89,7 +89,8 @@ h5 {
 h6 {
   font-size: 14px;
 }
-/* HEADER ----------------------------------------------------*/header {
+/* HEADER ----------------------------------------------------*/
+header {
   background: url(../img/header.png);
   min-height: 150px;
 }
@@ -126,7 +127,6 @@ nav {
   word-spacing: -0.1em;
   font-size: 20px;
   /* sub navigation -----------------------------------------------------*/
-
 }
 #nav > li.current-menu-item i,
 #nav > li.current_page_item i {
@@ -185,7 +185,8 @@ nav {
   margin-bottom: 30px;
   float: left;
 }
-/* MAIN ----------------------------------------------------*/#main .wrapper {
+/* MAIN ----------------------------------------------------*/
+#main .wrapper {
   margin-top: 60px;
   margin-bottom: 50px;
   min-height: 500px;
@@ -193,7 +194,8 @@ nav {
   font-size: 16px;
   line-height: 1.5em;
 }
-/* HEALINE ----------------------------------------------------*/.headline {
+/* HEALINE ----------------------------------------------------*/
+.headline {
   color: #cb5432;
   text-align: center;
   font-family: mensch;
@@ -203,7 +205,8 @@ nav {
   text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
 }
-/* FEATURE ----------------------------------------------------*/.feature {
+/* FEATURE ----------------------------------------------------*/
+.feature {
   width: 960px;
   margin-left: -20px;
 }
@@ -256,7 +259,8 @@ nav {
   font-size: 20px;
   line-height: 20px;
 }
-/* PAGE CONTENT ----------------------------------------------------*/.page-content {
+/* PAGE CONTENT ----------------------------------------------------*/
+.page-content {
   position: relative;
   background: #f3e4c8;
   color: #585246;
@@ -304,9 +308,10 @@ nav {
   margin: 20px 0;
 }
 .acf-map img {
- max-width: inherit !important;
+  max-width: inherit !important;
 }
-/* PORTFOLIO ----------------------------------------------------*/.portfolio-content {
+/* PORTFOLIO ----------------------------------------------------*/
+.portfolio-content {
   margin-bottom: 40px;
 }
 .portfolio-content .project-content {
@@ -508,7 +513,8 @@ nav {
 #sidebar a {
   color: #cb5432;
 }
-/* FILTERED ITEMS ----------------------------------------------------*/.isotope-item {
+/* FILTERED ITEMS ----------------------------------------------------*/
+.isotope-item {
   z-index: 2;
 }
 .isotope-hidden.isotope-item {
@@ -558,7 +564,8 @@ nav {
   clear: right;
   margin-right: 0 !important;
 }
-/* FOOTER ----------------------------------------------------*/footer {
+/* FOOTER ----------------------------------------------------*/
+footer {
   background: #585246 url(../img/footer.png) repeat-x;
   color: #f3e4c8;
   padding-bottom: 60px;
@@ -673,5 +680,5 @@ footer #footer-bottom {
 }
 
 body {
-	font-size: 16px;
+  font-size: 16px;
 }

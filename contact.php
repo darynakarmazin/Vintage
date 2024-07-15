@@ -4,14 +4,35 @@
  * Template name: Contact
  */
 
- get_header(); ?>
+get_header(); 
 
-     <!-- page-content -->
-    <div class="page-content">
+$content = get_field('content'); ?>
 
-      <h2 class="heading"><?php the_title() ;?></h2>
-      <div id="map_canvas"></div>
-      <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet.</p>
+
+<div class="page-content">
+
+    <h2 class="heading"><?php the_title();?></h2>
+
+      <!-- GOOGLE MAPS -->
+      <?php if( have_rows('locations') ): ?>
+          <div class="acf-map" data-zoom="8">
+              <?php while ( have_rows('locations') ) : the_row(); 
+
+                 // Load sub field values.
+                 $location = get_sub_field('location');
+                 ?>
+                 <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
+                 </div>
+         <?php endwhile; ?>
+         </div>
+      <?php endif; ?>
+    
+    <?php if ($content) : ?>
+
+        <?php echo $content; ?>
+
+    <?php endif; ?>
+      
       <!-- ENDS GOOGLE MAPS -->
       <h2 class="heading">Contact Form</h2>
       <!-- form -->
@@ -46,22 +67,5 @@
       <div class="c-4"></div>
     </div>
     <!-- ENDS page-content -->
-
-      <!-- GOOGLE MAPS -->
-      <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-      <script>
-      function initialize() {
-          var latlng = new google.maps.LatLng(-34.397, 150.644);
-          var myOptions = {
-              zoom: 8,
-              center: latlng,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          var map = new google.maps.Map(document.getElementById("map_canvas"),
-          myOptions);
-      }
-
-      initialize();
-      </script>
 
     <?php get_footer();?>

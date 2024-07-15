@@ -16,3 +16,10 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));	
 }
+
+// Method 1: Filter.
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyBL8ZFUG_x6n0XO0czZefjsK0_y_yKVA5s';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
