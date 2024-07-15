@@ -30,12 +30,13 @@
 
     <?php endif; ?>
     <!-- ENDS posts list -->
+     
     <!-- sidebar -->
     <aside id="sidebar">
       <ul>
       <?php 
 
-      $sponsors = get_field('sponsors_list', get_option('page_for_posts'));
+      $sponsors = get_field('sponsors_list', 'option');
 
       if($sponsors)  : ?>
 
