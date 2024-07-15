@@ -75,13 +75,35 @@ endif;
     <!-- sidebar -->
     <aside id="sidebar">
       <ul>
+      <?php 
 
+      $sponsors = get_field('sponsors_list', get_option('page_for_posts'));
 
-      
+      if($sponsors)  : ?>
+
         <li class="block">
           <h4 class="heading">Sponsors</h4>
-          <div class="ads cf"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/themeforest.gif" alt=""></a> <a href="#" class="last"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/mojo.jpeg" alt=""></a> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/themeforest.gif" alt=""></a> <a href="#" class="last"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/mojo.jpeg" alt=""></a> </div>
+          <div class="ads cf"> 
+            <?php foreach ($sponsors as $sponsor):
+              $i++;            
+              $image = $sponsor['sponsor_image'];
+              $url = $sponsor['sponsor_url'];
+
+              if ($i % 2 == 0):
+                $class = "last";
+              else:
+                $class = "";
+              endif;
+              ?>
+
+              <a class="<?php echo $class; ?>" href="<?php echo $url; ?>">
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+              </a>
+            <?php endforeach; ?>
+          </div>
         </li>
+
+        <?php endif; ?>
 
         <?php 
         $textWidgetTitle = get_field('widget_title', get_option('page_for_posts'));
