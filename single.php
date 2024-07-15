@@ -75,14 +75,17 @@ endif;
     <!-- sidebar -->
     <aside id="sidebar">
       <ul>
+
+
+      
         <li class="block">
           <h4 class="heading">Sponsors</h4>
           <div class="ads cf"> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/themeforest.gif" alt=""></a> <a href="#" class="last"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/mojo.jpeg" alt=""></a> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/themeforest.gif" alt=""></a> <a href="#" class="last"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/mojo.jpeg" alt=""></a> </div>
         </li>
 
         <?php 
-        $textWidgetTitle = get_field('text_widget', get_option('page_for_posts'));
-        $textWidgetContent = get_field('text_widget_content', get_option('page_for_posts'));
+        $textWidgetTitle = get_field('widget_title', get_option('page_for_posts'));
+        $textWidgetContent = get_field('widget_content', get_option('page_for_posts'));
         if($textWidgetContent) :
         ?>       
         <li class="block">
