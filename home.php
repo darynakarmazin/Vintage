@@ -35,11 +35,8 @@
     <aside id="sidebar">
       <ul>
       <?php 
-
       $sponsors = get_field('sponsors_list', 'option');
-
       if($sponsors)  : ?>
-
         <li class="block">
           <h4 class="heading">Sponsors</h4>
           <div class="ads cf"> 
@@ -47,21 +44,18 @@
               $i++;            
               $image = $sponsor['sponsor_image'];
               $url = $sponsor['sponsor_url'];
-
               if ($i % 2 == 0):
                 $class = "last";
               else:
                 $class = "";
               endif;
               ?>
-
               <a class="<?php echo $class; ?>" href="<?php echo $url; ?>">
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
               </a>
             <?php endforeach; ?>
           </div>
         </li>
-
         <?php endif; ?>
 
         <?php 
@@ -77,19 +71,29 @@
         </li>
         <?php endif; ?>
 
-        <li class="block">
-          <h4 class="heading">Categories</h4>
-          <ul>
-            <li class="cat-item"><a href="#">Film and video<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Print<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Photo and lomo<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Habitant morbi<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Film and video<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Print<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Photo and lomo<span class="post-counter"> (2)</span></a></li>
-            <li class="cat-item"><a href="#">Habitant morbi<span class="post-counter"> (2)</span></a></li>
-          </ul>
-        </li>
+        <?php 
+            $args = array(
+                'taxonomy' => 'category',
+                'hide_empty' => true,
+                'exclude' => array('1')
+            );
+            $terms = get_categories($args);
+            if ($terms) : ?>
+            <li class="block">
+                <h4 class="heading">Categories</h4>
+                <ul>
+                    <?php foreach ($terms as $term) : 
+                        $termid = $term->term_id; ?>
+                        <li class="cat-item">
+                            <a href="<?php echo get_term_link($term) ;?>">
+                                <?php echo $term->name;?>
+                                <span class="post-counter"> (<?php echo $term->count;?>)</span>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </li>
+        <?php endif; ?>
       </ul>
     </aside>
     <!-- ENDS sidebar -->
