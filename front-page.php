@@ -1,20 +1,37 @@
   <?php get_header(); ?>
+
     <!-- SLIDER -->
+    <?php if (have_rows('slider')) : ?>
+
     <div class="slider-wrapper theme-default theme-project theme-home">
       <div class="ribbon"></div>
       <div id="slider" class="nivoSlider">
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/01.jpg" alt="">
+
+        <?php while (have_rows('slider')) : the_row();
+
+          $img = get_sub_field('image');
+          $link = get_sub_field('link');
+
+          if ($img) :
+        
+        ?>
+
+        
+
+        <a href="<?php echo $link['url']; ?>">
+          <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
         </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/02.jpg" alt="">
-        </a>
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/03.jpg" alt="">
-        </a> 
+          
+          <?php endif; ?>
+        <?php endwhile; ?>
+
       </div>
     </div>
+
+    <?php endif; ?>
     <!-- ENDS SLIDER -->
+  
+
     <!-- headline -->
     <div class="headline"> I'm a Retro style HTML template and completely FREE! </div>
     <!-- ENDS headline -->
