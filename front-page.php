@@ -2,7 +2,17 @@
     <!-- SLIDER -->
     <div class="slider-wrapper theme-default theme-project theme-home">
       <div class="ribbon"></div>
-      <div id="slider" class="nivoSlider"> <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/01.jpg" alt=""> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/02.jpg" alt=""></a> <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/03.jpg" alt=""> </div>
+      <div id="slider" class="nivoSlider">
+        <a href="#">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/01.jpg" alt="">
+        </a>
+        <a href="#">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/02.jpg" alt="">
+        </a>
+        <a href="#">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/dummies/slides/03.jpg" alt="">
+        </a> 
+      </div>
     </div>
     <!-- ENDS SLIDER -->
     <!-- headline -->
