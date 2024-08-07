@@ -16,8 +16,6 @@
         
         ?>
 
-        
-
         <a href="<?php echo $link['url']; ?>">
           <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
         </a>
