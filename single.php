@@ -142,6 +142,7 @@ endif;
             </li>
         <?php endif; ?>
       </ul>
+      
     </aside>
     <!-- ENDS sidebar -->
 </div>
