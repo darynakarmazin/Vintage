@@ -106,8 +106,8 @@ endif;
         <?php endif; ?>
 
         <?php 
-        $textWidgetTitle = get_field('text_widget', get_option('page_for_posts'));
-        $textWidgetContent = get_field('text_content', get_option('page_for_posts'));
+        $textWidgetTitle = get_field('widget_title', get_option('page_for_posts'));
+        $textWidgetContent = get_field('widget_content', get_option('page_for_posts'));
         if($textWidgetContent) :
         ?>     
         <li class="block">
