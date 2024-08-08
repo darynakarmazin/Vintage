@@ -17,7 +17,7 @@
 <header>
   <!-- header wrapper -->
   <div class="wrapper cf">
-    <div id="logo"> <a href="index.html" ><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a> </div>
+    <div id="logo"> <a href="<?php echo get_template_directory_uri(); ?>" ><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a> </div>
   </div>
   <!-- ENDS header wrapper -->
   <!-- nav -->
