@@ -1,1 +1,1 @@
-"Vintage" WordPress custom theme with ACF fields. (local version)
+"Vintage" WordPress custom theme with ACF fields.
